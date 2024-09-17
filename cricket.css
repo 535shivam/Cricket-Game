@@ -1,0 +1,24 @@
+h1{
+    color: blue
+}
+
+.bat-class{
+    border-radius: 20px;
+    border: none;
+    background-color: aqua;
+    padding: 25px;
+}
+
+.ball-class{
+    border-radius: 20px;
+    border: none;
+    background-color: pink;
+    padding: 25px;
+}
+
+.stump-class{
+    border-radius: 20px;
+    border: none;
+    background-color: red;
+    padding: 25px;
+}
