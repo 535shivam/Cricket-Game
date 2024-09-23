@@ -1,7 +1,8 @@
 h1{
-    color: blue;
+    color:  green;
     margin-top: 151px;
-    margin-left: 460px;
+    margin-left: 339px;
+    font-size: 50px;
 }
 .bat-class{
     border-radius: 20px;
@@ -22,15 +23,23 @@ h1{
 .stump-class{
     border-radius: 20px;
     border: none;
+    background-color: violet;
+    padding: 25px;
+    font-size: 25px;
+}
+
+.reset-class{
+    border-radius: 20px;
+    border: none;
     background-color: red;
     padding: 25px;
     font-size: 25px;
 }
 
 #main{
-    margin-left: 535px;
+    margin-left: 457px;
     border: 5px solid;
-    width: 324px;
+    width: 445px;
     height: 79px;
     padding: 10px;
     background-color: blue;
