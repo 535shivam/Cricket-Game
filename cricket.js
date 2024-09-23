@@ -1,79 +1,133 @@
-function showBatFunction(){
-let randomNumber=Math.random() * 3;
+
+let userMove;
+let computerMove; 
 let computerChoice;
-if(randomNumber > 0 && randomNumber <= 1){
-    computerChoice='Bat';
+let resultMsg ;
+
+
+
+
+//Computer generated number.
+function compGenChoice(){
+    let randomNumber=Math.random() * 3;    
+     if(randomNumber > 0 && randomNumber <= 1){
+         return 'Bat';
+     }
+     else if(randomNumber > 1 && randomNumber <= 2){
+         return 'Ball';
+     }
+     else{
+         return 'Stump';
+     }    
 }
 
-else if(randomNumber > 1 && randomNumber <= 2){
-    computerChoice='Ball';
-}
-else{
-    computerChoice='Stump';
+
+
+function finalResult(userMove , computerMove , result){
+    alert(`You have choosen ${userMove}. Computer Choice is ${computerMove} and ${result}.`);
 }
 
-let reaultMsg;
-if(computerChoice==='Ball'){
-    reaultMsg='User Won';
-}
-else if(computerChoice==='Bat'){
-    reaultMsg=`It's Tie`;
-}
-else if(computerChoice==='Stump'){
-    reaultMsg='Computer has Won';
-}
-alert(`You have choosen Bat. Computer Choice is ${computerChoice} and ${reaultMsg}`);
 
+function showBatFunction(){
+    computerChoice=compGenChoice();    
+     resultMsg =getResult('Bat' , computerChoice);    
+    finalResult('Bat' , computerChoice ,resultMsg);        
 }
-
 
 function showBallFuntion(){
-randomNumber=Math.random() * 3;
-    if(randomNumber > 0 && randomNumber <= 1){
-        computerChoice='Bat';
-    }
-
-    else if(randomNumber > 1 && randomNumber <= 2){
-        computerChoice='Ball';
-    }
-    else{
-        computerChoice='Stump';
-    }
-    
-    if(computerChoice==='Ball'){
-        reaultMsg=`It's Tie`;
-    }
-    else if(computerChoice==='Bat'){
-        reaultMsg='Computer has Won';
-    }
-    else if(computerChoice==='Stump'){
-        reaultMsg='User Won';
-    }
-    alert(`You have choosen Ball. Computer Choice is ${computerChoice} and ${reaultMsg}`);
+    computerChoice=compGenChoice(); 
+     resultMsg =getResult('Ball' , computerChoice);
+    finalResult('Ball' , computerChoice ,resultMsg);
 }
 
 
-function showStumpFuntion(){
-    randomNumber=Math.random() * 3;
-    if(randomNumber > 0 && randomNumber <= 1){
-        computerChoice='Bat';
+ function showStumpFuntion(){
+    computerChoice=compGenChoice();
+    resultMsg =getResult('Stump' , computerChoice);
+    finalResult('Stump' , computerChoice ,resultMsg);
+}
+
+
+//To check user move and computer move.
+function getResult(userMove , computerMove){
+    if (userMove==='Bat'){
+        if(computerMove==='Ball'){
+            return 'User Won';
+        }
+        else if(computerMove==='Bat'){
+            return `It's Tie.`;
+        }
+        else if(computerMove==='Stump'){
+            return 'Computer has Won.';
+        } 
+    }
+    else if (userMove==='Ball'){
+        if(computerMove==='Ball'){
+            return `It's Tie`;
+            }
+            else if(computerMove==='Bat'){
+                return 'Computer has Won';
+            }
+            else if(computerMove==='Stump'){
+                return 'User Won';
+            }
     }
 
-    else if(randomNumber > 1 && randomNumber <= 2){
-        computerChoice='Ball';
-    }
     else{
-        computerChoice='Stump';
+        if(computerMove==='Ball'){
+            return 'Computer has Won';
+        }
+        else if(computerMove==='Bat'){
+            return 'User Won';
+        }
+        else if(computerMove==='Stump'){
+            return `It's Tie`;
+        }
     }
-    
-    if(computerChoice==='Ball'){
-        reaultMsg='Computer has Won';
-    }
-    else if(computerChoice==='Bat'){
-        reaultMsg='User Won';
-    }
-    else if(computerChoice==='Stump'){
-        reaultMsg=`It's Tie`;
-    }
-    alert(`You have choosen Stump. Computer Choice is ${computerChoice} and ${reaultMsg}`);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
