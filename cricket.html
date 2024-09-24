@@ -8,19 +8,31 @@
     <h1>Welcome to Simple Cricket Game</h1>
     <div id="main">
 
-    <button class="bat-class"
-    onclick="computerChoice=showBatFunction();"><b>Bat</b></button>
+    <button class="button-class"
+    onclick="computerChoice=showBatFunction();">
+    <img src="Image/bat.png" alt="bat-image" class="choice-image"></button>
 
+    <button class="button-class" 
+    onclick="computerChoice=showBallFuntion()">
+    <img src="Image/ball.png" alt="ball-image" class="choice-image"></button>
 
-    <button class="ball-class" 
-    onclick="computerChoice=showBallFuntion()"><b>Ball</b></button>
-
-
-    <Button class="stump-class"
-    onclick="computerChoice=showStumpFuntion()"><b>Stump</b></Button>
+    <Button class="button-class"
+    onclick="computerChoice=showStumpFuntion()">
+    <img src="Image/stump.png" alt="stump-image" class="choice-image"></Button>
    
-    <button class="reset-class" onclick="showResetFunction();"><b>Reset</b></button>
-</div>
-<script src="scripts/cricket.js">Click</script>
+    </div>
+
+    <div id="content">
+    
+    <h3 id="user-id"></h3>
+    <h3 id="computer-id"></h3>
+    <h3 id="result-id"></h3>
+    <h3 id="score-id"></h3>
+    
+    <button class="reset-class" onclick="showResetFunction();">
+    <img src="Image/reset.jpg" alt="reset-image"     class="choice-image"></button>
+    
+    </div>
+    <script src="scripts/cricket.js">Click</script>
 </body>
 </html>

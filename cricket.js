@@ -1,4 +1,3 @@
-
 let userMove;
 let computerMove; 
 let computerChoice;
@@ -21,10 +20,11 @@ function resetScore(localStr){
         tie:0,
     };
     score.displayScore= function(){
-        return `Win ${score.win}  Lost ${score.lost}  Tie ${score.tie}`;
-    }; 
-}
+        return `Score: Win ${score.win}  Lost ${score.lost}  Tie ${score.tie}`;
+    };
 
+    finalResult(); 
+}
 
 
 //Computer generated number.
@@ -45,11 +45,17 @@ function compGenChoice(){
 //To see the result in the alert Box.
 function finalResult(userMove , computerMove , result){
     localStorage.setItem('score' , JSON.stringify(score));
-    alert(`You have choosen ${userMove}. Computer Choice is ${computerMove} 
     
-    ${result}.
+    document.querySelector('#user-id').innerText=
+    userMove ? `You have choosen ${userMove}.`:'';
     
-    ${score.displayScore()}`);
+    document.querySelector('#computer-id').innerText=
+    computerMove ? `Computer Choice is ${computerMove}`:'';
+    
+    document.querySelector('#result-id').innerText= 
+    result||'';
+
+    document.querySelector('#score-id').innerText=score.displayScore();
 }
 
 
